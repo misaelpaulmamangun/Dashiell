@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&family=Silkscreen:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DynaPuff', cursive;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.line {
+  text-decoration: line-through;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #ccc;
+  border-radius: 4px;
+  font-weight: 400;
+  font-family: 'DynaPuff', cursive;
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+li > div:first-child {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+li > div:last-child {
+  background-color: red;
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.box {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+}

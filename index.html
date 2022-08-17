@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Todo App &bull; AlpineJS</title>
+  </head>
+  <body>
+    <div class="container">
+      <div x-data="todo" class="box">
+        <h1 class="text-center">Simple Todo App</h1>
+        <form @submit.prevent="addTodo">
+          <input type="text" x-model="newTodo" name="todo" id="todo" />
+          <button type="submit">Add</button>
+        </form>
+        <ul id="todo-list">
+          <template x-for="(todo, index) in todos" :key="index">
+            <li>
+              <div
+                @click="toggleTodo(index)"
+                x-text="todo.title"
+                :class="todo.completed ? 'line' : ''"
+              ></div>
+              <div @click="removeTodo(index)">&#10006;</div>
+            </li>
+          </template>
+        </ul>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
